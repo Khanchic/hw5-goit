@@ -95,7 +95,7 @@ a:focus {
 .studia:hover {
   color: #2196f3;
 }
-.studia::after {
+.cut::after {
   content: "";
   display: block;
   width: 100%;
@@ -127,17 +127,7 @@ a:focus {
 .portfolio:focus {
   color: #2196f3;
 }
-.portfolio:hover::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  bottom: -28px;
-  background: #2196f3;
-  border-radius: 2px;
-}
+
 .contacs {
   text-decoration: none;
   font-size: 14px;
@@ -577,6 +567,9 @@ a:focus {
   position: relative;
   display: flex;
   flex-direction: column;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0%);
 }
 .items_3_text::before {
   display: flex;
@@ -587,16 +580,13 @@ a:focus {
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .items_3_text:hover::before {
+  contain: "";
   opacity: 1;
-
-  transform: translateY(0%);
 }
 .items_3_text:hover .active_text {
+  content: "";
   opacity: 1;
   transform: translateY(0%);
 }
@@ -610,6 +600,9 @@ a:focus {
   bottom: 63px;
   opacity: 0;
   transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0%);
 }
 
 .back_text {
@@ -629,6 +622,9 @@ a:focus {
 }
 .items:hover .items_3_text::before {
   transform: translateY(0%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0%);
 }
 
 .item_3 {
@@ -646,7 +642,6 @@ a:focus {
 }
 .item_3:hover .active_text {
   opacity: 1;
-
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0%);
